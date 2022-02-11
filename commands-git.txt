@@ -1,0 +1,6 @@
+git init = Criando os arquivos .git
+git status = Verifica o status de cada arquivo, status de modificação, status de exclusão, status de não-adicionado etc
+git add . = Adiciona todos os arquivos
+git commit -m = Faz o commit dos arquivos
+git push = Sobe os arquivos da sua versão para o repositorio no GitHub
+git pull = Traz os arquivos do GitHub para a sua versão
