@@ -4,3 +4,6 @@ git add . = Adiciona todos os arquivos
 git commit -m = Faz o commit dos arquivos
 git push = Sobe os arquivos da sua versão para o repositorio no GitHub
 git pull = Traz os arquivos do GitHub para a sua versão
+git reflog = Mostra os commits feitos e seus respectivos ID's
+git reset (ID da versão) = Você pode voltar a uma versão antiga ou ir até uma versão atual
+git checkout (nome da branch) = Pra trocar a branch que você ta utilizando
