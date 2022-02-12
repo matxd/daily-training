@@ -5,22 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Aprendendo JavaScript</title>
 </head>
 <body>
-    <input type="number" id="n1"> +
-    <input type="number" id="n2">
+    <h2>Testando Loop com Soma</h2>
+    <input type="text" id="n1"> +
+    <input type="text" id="n2">
     <button onclick="loop()">Resultado</button>
+    <p id="msgLoop"></p>
     <hr>
-
-    <input type="text" placeholder="username" id="user">
-    <input type="password" placeholder="password" id="pass">
-    <button onclick="login()">Fazer Login</button> 
+    <h2>Sistema de Login</h2>
+    <input type="text" placeholder="Username" id="user">
+    <input type="password" placeholder="Password" id="pass">
+    <button onclick="login()">Fazer Login</button>
+    <p id="msgLogin"></p> 
     <hr>
-    
-    <button id="valores" onclick="calculadora()">Inserir</button>
-    <p id="resultado">Clique no botão acima para inserir os valores</p>
-
-    <script src="script.js"></script>
+    <h2>Calculadora de Dois Valores</h2>
+    <button id="valores" onclick="calculator()">Inserir</button>
+    <p id="msgCalc">Clique no botão acima para inserir os valores</p>
 </body>
 </html>

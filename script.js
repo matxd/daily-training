@@ -11,9 +11,9 @@ function loop(){
         i += 1
         resultado = numUm + numDois++
     } while(i < 10)
-    alert("O resultado desse calculo é: " + resultado)
-    document.getElementById("n1").value = ""
-    document.getElementById("n2").value = ""
+        msgLoop.innerHTML = `O resultado desse calculo é: ${resultado}`
+        document.getElementById("n1").value = ""
+        document.getElementById("n2").value = ""
 }
 
 function login(){
@@ -21,14 +21,14 @@ function login(){
     let senha = document.getElementById("pass").value
 
     if(usuario == 0 || senha == 0){
-        alert("Preencha todos os campos.")
+        msgLogin.innerHTML = "Preencha todos os campos."
     } else if(usuario == "admin" && senha == "admin"){
-        alert("Login feito com sucesso.")
+        msgLogin.innerHTML = "Login feito com sucesso."
     } else{
-        alert("Usuario ou Senha invalido.")
+        msgLogin.innerHTML = "Usuario ou Senha invalido."
     }  
-    document.getElementById("user").value = ""
-    document.getElementById("pass").value = ""
+        document.getElementById("user").value = ""
+        document.getElementById("pass").value = ""
 }
 
 var string = "Boa noite Matheus"
@@ -48,25 +48,32 @@ console.log(array.slice(1, 2)) // slice cria um novo array a partir de um existe
 console.log(array.pop()) // pop remove o ultimo elemento do array
 console.log(array.push("expoit")) // push adiciona um elemento na ultima posição do array
 
-function calculadora(){
-    let valorUm = Number(prompt("Insira um numero"))
-    let valorDois = Number(prompt("Insira outro número"))
-    let operador = prompt("Digite um operador. Ex: + , - , / , *")
+function calculator(){
+    let valorUm = Number(prompt("Digite um número"))
+    let operador = prompt("Digite um operador. Ex: + , - , / , *, %")
+    let valorDois = Number(prompt("Digite outro número"))
 
-    switch(operador){
-        case "+":
-            resultado.innerHTML = `<p>${valorUm} + ${valorDois} é igual a:</p>` + (valorUm + valorDois)
-        break;
-        case "-":
-            resultado.innerHTML = `<p>${valorUm} - ${valorDois} é igual a:</p>` + (valorUm - valorDois)
-        break;
-        case "*":
-            resultado.innerHTML = `<p>${valorUm} * ${valorDois} é igual a:</p>` + (valorUm * valorDois)
-        break;
-        case "/":
-            resultado.innerHTML = `<p>${valorUm} / ${valorDois} é igual a:</p>` + (valorUm / valorDois)
-        break;
-        default:
+    if(isNaN(valorUm) || isNaN(valorDois)){ // isNaN(variavel) verifica se o valor da variavel retorna um numero ou não
+        resultado.innerHTML = "Digite um número"
+    } else {
+        switch(operador){
+            case "+":
+                resultado.innerHTML = `${valorUm} + ${valorDois} é igual a: ` + (valorUm + valorDois)
+            break;
+            case "-":
+                resultado.innerHTML = `${valorUm} - ${valorDois} é igual a:` + (valorUm - valorDois)
+            break;
+            case "*":
+                resultado.innerHTML = `${valorUm} x ${valorDois} é igual a:` + (valorUm * valorDois)
+            break;
+            case "/":
+                resultado.innerHTML = `${valorUm} dividido por ${valorDois} é igual a:` + (valorUm / valorDois)
+            break;
+            case "%":
+                resultado.innerHTML = `${valorUm}% de ${valorDois} é igual a:` + ((valorDois / 100) * valorUm)
+            break;
+            default:
+                resultado.innerHTML = "Operador inválido"
+        }
     }
 }
-
