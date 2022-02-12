@@ -54,26 +54,26 @@ function calculator(){
     let valorDois = Number(prompt("Digite outro número"))
 
     if(isNaN(valorUm) || isNaN(valorDois)){ // isNaN(variavel) verifica se o valor da variavel retorna um numero ou não
-        resultado.innerHTML = "Digite um número"
+        msgCalc.innerHTML = "Digite um número"
     } else {
         switch(operador){
             case "+":
-                resultado.innerHTML = `${valorUm} + ${valorDois} é igual a: ` + (valorUm + valorDois)
+                msgCalc.innerHTML = `${valorUm} + ${valorDois} é igual a: ` + (valorUm + valorDois)
             break;
             case "-":
-                resultado.innerHTML = `${valorUm} - ${valorDois} é igual a:` + (valorUm - valorDois)
+                msgCalc.innerHTML = `${valorUm} - ${valorDois} é igual a: ` + (valorUm - valorDois)
             break;
             case "*":
-                resultado.innerHTML = `${valorUm} x ${valorDois} é igual a:` + (valorUm * valorDois)
+                msgCalc.innerHTML = `${valorUm} x ${valorDois} é igual a: ` + (valorUm * valorDois)
             break;
             case "/":
-                resultado.innerHTML = `${valorUm} dividido por ${valorDois} é igual a:` + (valorUm / valorDois)
+                msgCalc.innerHTML = `${valorUm} dividido por ${valorDois} é igual a: ` + (valorUm / valorDois)
             break;
             case "%":
-                resultado.innerHTML = `${valorUm}% de ${valorDois} é igual a:` + ((valorDois / 100) * valorUm)
+                msgCalc.innerHTML = `${valorUm}% de ${valorDois} é igual a: ` + ((valorDois / 100) * valorUm)
             break;
             default:
-                resultado.innerHTML = "Operador inválido"
+                msgCalc.innerHTML = "Operador inválido"
         }
     }
 }
