@@ -7,13 +7,17 @@ function loop(){
     let i = 0
     let resultado = ''
 
-    do{
-        i += 1
-        resultado = numUm + numDois++
-    } while(i < 10)
-        msgLoop.innerHTML = `O resultado desse calculo é: ${resultado}`
-        document.getElementById("n1").value = ""
-        document.getElementById("n2").value = ""
+    if(numUm == 0 || numDois == 0){
+        msgLoop.innerHTML = "Digite os valores."
+    } else {
+        do{
+            i += 1
+            resultado = numUm + numDois++
+    }   while(i < 10)
+            msgLoop.innerHTML = `O resultado desse calculo é: ${resultado}`
+    }   
+    document.getElementById("n1").value = ""
+    document.getElementById("n2").value = ""
 }
 
 function login(){
@@ -27,8 +31,8 @@ function login(){
     } else{
         msgLogin.innerHTML = "Usuario ou Senha invalido."
     }  
-        document.getElementById("user").value = ""
-        document.getElementById("pass").value = ""
+    document.getElementById("user").value = ""
+    document.getElementById("pass").value = ""
 }
 
 var string = "Boa noite Matheus"
@@ -54,7 +58,7 @@ function calculator(){
     let valorDois = Number(prompt("Digite outro número"))
 
     if(isNaN(valorUm) || isNaN(valorDois)){ // isNaN(variavel) verifica se o valor da variavel retorna um numero ou não
-        msgCalc.innerHTML = "Digite um número"
+        msgCalc.innerHTML = "<strong>ERROR: Digite um número.</strong>"
     } else {
         switch(operador){
             case "+":
@@ -73,7 +77,7 @@ function calculator(){
                 msgCalc.innerHTML = `${valorUm}% de ${valorDois} é igual a: ` + ((valorDois / 100) * valorUm)
             break;
             default:
-                msgCalc.innerHTML = "Operador inválido"
+                msgCalc.innerHTML = "<strong>ERROR: Operador inválido.</strong>"
         }
     }
 }
