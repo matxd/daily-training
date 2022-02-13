@@ -1,5 +1,6 @@
-// var = cria variáveis globais
-// let = cria variáveis locais
+// var = cria variáveis com escopo global
+// let = cria variáveis com escopo local
+// const = cria variáveis com escopo local porém não pode ser re-atribuida, mas pode ser modificada por uma propriedade
 
 function loop(){
     let numUm = Number(document.getElementById("n1").value)
@@ -35,7 +36,7 @@ function login(){
     document.getElementById("pass").value = ""
 }
 
-var string = "Boa noite Matheus"
+let string = "Boa noite Matheus"
 console.log(string.replace("Matheus", "xd"))
 
 if (string.includes("Boa", 0)){
@@ -44,10 +45,10 @@ if (string.includes("Boa", 0)){
     console.log("Palavra não encontrada")
 }
 
-var dias = 7
+let dias = 7
 dias > 15 ? console.log("Correto") : console.log("Incorreto") // IF simples (OPERADOR TERNARIO)
 
-var array = ["xdm", "matheus", "esb", "tyler", "cash"]
+let array = ["xdm", "matheus", "esb", "tyler", "cash"]
 console.log(array.slice(1, 2)) // slice cria um novo array a partir de um existente, dois indices sem incluir o indice final.
 console.log(array.pop()) // pop remove o ultimo elemento do array
 console.log(array.push("expoit")) // push adiciona um elemento na ultima posição do array
@@ -81,3 +82,10 @@ function calculator(){
         }
     }
 }
+
+const dados = {
+    nome: "Matheus",
+    email: "xdev@gmail.com", 
+    telefone: 61123456789
+}
+console.log(dados.nome)
