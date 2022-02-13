@@ -39,7 +39,7 @@ function login(){
 let string = "Boa noite Matheus"
 console.log(string.replace("Matheus", "xd"))
 
-if (string.includes("Boa", 0)){
+if(string.includes("Boa", 0)){
     console.log("Palavra encontrada")
 } else {
     console.log("Palavra não encontrada")
