@@ -45,7 +45,7 @@ if (string.includes("Boa", 0)){
 }
 
 var dias = 7
-dias > 2 ? console.log("Correto") : console.log("Incorreto") // IF simples (OPERADOR TERNARIO)
+dias > 15 ? console.log("Correto") : console.log("Incorreto") // IF simples (OPERADOR TERNARIO)
 
 var array = ["xdm", "matheus", "esb", "tyler", "cash"]
 console.log(array.slice(1, 2)) // slice cria um novo array a partir de um existente, dois indices sem incluir o indice final.
