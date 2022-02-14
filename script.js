@@ -38,6 +38,7 @@ function login(){
 
 let string = "Boa noite Matheus"
 console.log(string.replace("Matheus", "xd"))
+console.log(string.textContent = "Testando")
 
 if(string.includes("Boa", 0)){
     console.log("Palavra encontrada")
