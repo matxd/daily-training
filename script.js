@@ -36,24 +36,6 @@ function login(){
     document.getElementById("pass").value = ""
 }
 
-let string = "Boa noite Matheus"
-console.log(string.replace("Matheus", "xd"))
-console.log(string.textContent = "Testando")
-
-if(string.includes("Boa", 0)){
-    console.log("Palavra encontrada")
-} else {
-    console.log("Palavra não encontrada")
-}
-
-let dias = 7
-dias > 15 ? console.log("Correto") : console.log("Incorreto") // IF simples (OPERADOR TERNARIO)
-
-let array = ["xdm", "matheus", "esb", "tyler", "cash"]
-console.log(array.slice(1, 2)) // slice cria um novo array a partir de um existente, dois indices sem incluir o indice final.
-console.log(array.pop()) // pop remove o ultimo elemento do array
-console.log(array.push("expoit")) // push adiciona um elemento na ultima posição do array
-
 function calculator(){
     let valorUm = Number(prompt("Digite um número"))
     let operador = prompt("Digite um operador. Ex: + , - , / , *, %")
@@ -84,9 +66,37 @@ function calculator(){
     }
 }
 
+function parametro(numero1 = 5, numero2 = 10){ // PARÂMETRO é usado na declaração da função
+    return numero1 * numero2 // código no mesmo bloco após o RETURN é ignorado 
+}
+console.log(parametro(50, 20)) // ARGUMENTO é usado na chamada da função
+
+let string = "Boa noite Matheus"
+console.log(string.replace("Matheus", "xd"))
+console.log(string.textContent = "Testando")
+
+if(string.includes("Boa", 0)){
+    console.log("Palavra encontrada")
+} else {
+    console.log("Palavra não encontrada")
+}
+
+let dias = 7
+dias > 15 ? console.log("Correto") : console.log("Incorreto") // IF simples (OPERADOR TERNARIO)
+
+let array = ["xdm", "matheus", "esb", "tyler", "cash"]
+console.log(array.slice(1, 2)) // slice cria um novo array a partir de um existente, dois indices sem incluir o indice final.
+console.log(array.pop()) // pop remove o ultimo elemento do array
+console.log(array.push("expoit")) // push adiciona um elemento na ultima posição do array
+
 const dados = {
     nome: "Matheus",
     email: "xdev@gmail.com", 
     telefone: 61123456789
 }
 console.log(dados.nome)
+
+let numeros = [10, 20, 30]
+for(let value of numeros){ // VALUE recebe o valor de NUMEROS a cada laço (sem indice)
+    console.log(value)
+}
