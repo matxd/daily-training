@@ -1,6 +1,6 @@
 // var = cria variáveis com escopo global
 // let = cria variáveis com escopo local
-// const = cria variáveis com escopo local porém não pode ser re-atribuida, mas pode ser modificada por uma propriedade
+// const = cria variáveis com escopo local porém não pode ser re-atribuida, podendo ser modificada por uma propriedade
 // null, undefined, "", false e 0 são todos valores falsos por padrao
 
 let string = "Boa noite Matheus"
