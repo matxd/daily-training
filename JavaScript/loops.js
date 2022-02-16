@@ -12,18 +12,18 @@ for(let value of random){ // FOR OF - forma mais simples de executar o FOR, valu
     console.log(value)
 }
 
-let contador = 0
-while(contador < 5){ // WHILE se lê enquanto, primeiro testa a condição e depois executa
-    if(contador % 2 == 0){ // % operador matematico que verifica se a divisão tem resto e retorna inteiro
-        console.log(`${contador} - Par`)
+let count = 0
+while(count < 5){ // WHILE se lê enquanto, primeiro testa a condição e depois executa
+    if(count % 2 == 0){ // % operador matematico que verifica se a divisão tem resto e retorna inteiro
+        console.log(`${count} - Par`)
     } else{ 
-        console.log(`${contador} - Impar`)
+        console.log(`${count} - Impar`)
     }
-    ++contador // ++ incrementa o contador em 1 a cada loop
+    ++count // ++ incrementa o contador em 1 a cada loop
 }
 
-let i = 0
+let inc = 0
 do{ // DO...WHILE sempre vai ser executado pelo menos uma vez, primeiro executa e depois testa a condição
-    i += 2 // incremento  
-} while(i < 0) // enquanto a condição for verdadeira vai voltar pro '' DO ''
-    console.log(`O resultado é: ${i}`) // resultado final quando a condição é falsa
+    inc += 2 // incremento  
+} while(inc < 0) // enquanto a condição for verdadeira vai voltar pro '' DO ''
+    console.log(`O resultado é: ${inc}`) // resultado final quando a condição é falsa
