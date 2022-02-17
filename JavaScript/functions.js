@@ -44,8 +44,19 @@ let valorDois = Number(prompt("Digite outro número"))
     }
 }
 
-function parametro(numero1 = 5, numero2 = 10){ // PARÂMETRO é usado na declaração da função
-    return numero1 * numero2 // código no mesmo bloco após o RETURN é ignorado 
+function parametro(...compl){  // ...nome serve pra adicionar mais parametros, todos no mesmo array
+    console.log(compl)
 }
+parametro("xdm", "expoit")
 
-console.log(parametro(50, 20)) // ARGUMENTO é usado na chamada da função
+var funcaoAnonima = function(){ // função anônima não tem nome, é armazenada dentro de uma variavel
+    console.log("Função Anônima JavaScript")
+}
+funcaoAnonima()
+
+function callBack(a, b, soma){ // função de callback são funções que os parametros é outra função que vai ser executada dentro dela
+    return soma(a + b)
+}
+console.log(callBack(5, 5, function(total){ // param. "total" vai receber o valor do param. "soma" e executar o bloco de codigo
+    return total * 2 
+}))
