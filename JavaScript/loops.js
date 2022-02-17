@@ -8,9 +8,11 @@ for(let dec = array.length - 1; dec >= 0; dec--){
 }
 
 let random = [10, 20, 30]
+let result  = 0
 for(let value of random){ // FOR OF - forma mais simples de executar o FOR, value recebe o valor de numeros a cada laço (sem indice)
-    console.log(value)
+    result += value
 }
+console.log(`A soma de todos os valores do array é: ${result}`)
 
 let count = 0
 while(count < 5){ // WHILE se lê enquanto, primeiro testa a condição e depois executa
