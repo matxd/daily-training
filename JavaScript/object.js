@@ -26,6 +26,8 @@ const developer = {
 }
 console.log(developer.digaOi("Matheus")) // chamando uma prop. e passando o valor do parametro
 
+let chaves = Object.keys(dados) // Object.keys exibe todas as prop. de um obj no formato de array
+let valores = Object.values(developer) // Object.values exibe todos os valores de cada prop. do obj no formato de array
 let merge = Object.assign({}, dados, developer) // Object.assign serve pra mergear/juntar dois ou mais obj's em um novo obj ( {} - novo obj )
 
 const usuarios = [
