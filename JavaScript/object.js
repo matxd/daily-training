@@ -1,40 +1,32 @@
 const dados = {
-    name: "xd",
+    nome: "xdm",
     email: "xdev@gmail.com", 
     tel: 61123456789
 }
 
-console.log(dados.tel)
-console.log(dados["name"])
-
-dados.ano = 2022 // adicionando novas propriedades a um objeto criado
-console.log(dados.ano)
-
-delete dados.tel // deleta uma propriedade do objeto
-console.log(dados)
-
+dados.ano = 2022 // adicionando novas prop. a um obj criado
 dados.array = ["valorUm", "valorDois"]
 dados.obj = {
-    keyZero: 1,
+    key: 1,
     keys: [3, 4, 5]
 }
-console.log(dados.obj.keyOne) // chamando uma propriedade de um objeto que está dentro de outro objeto
 
-const cor = "preto"
+let { nome, tel } = dados // armazenando uma prop. do obj em uma variavel
+let { email: contato } = dados // armazenando prop. e escolhendo a variavel
+let { obj: { keys }} = dados // armazenando prop. de um obj que é outro obj
+
+delete dados.tel // deleta uma prop. do obj
+
+let cor = "preto"
 const developer = {
-    digaOi(name){ // função dentro da propriedade do objeto 
-        return `Oi, ${name}` 
+    digaOi(nome){ // função dentro da prop. do obj 
+        return `Oi, ${nome}` 
     },
-    cor // adicionando variavel ao valor de uma propriedade
+    cor // adicionando variavel ao valor de uma prop.
 }
-console.log(developer.digaOi("Matheus")) // chamando uma propriedade e passando o valor do parametro
-console.log(developer.cor)
+console.log(developer.digaOi("Matheus")) // chamando uma prop. e passando o valor do parametro
 
-
-const merge = Object.assign({}, dados, developer) // Object.assign serve pra mergear/juntar dois ou mais objetos em um novo objeto ( {} - novo objeto )
-console.log(merge)
-
-
+let merge = Object.assign({}, dados, developer) // Object.assign serve pra mergear/juntar dois ou mais obj's em um novo obj ( {} - novo obj )
 
 const usuarios = [
     {nome: "Fulano", idade: 18, profissão: "Professor"},
@@ -57,14 +49,3 @@ const manipular = {
         return this.posicao = posicao
     }
 }
-
-console.log(manipular.atual)
-
-manipular.proximo
-console.log(manipular.atual)
-
-manipular.anterior
-console.log(manipular.atual)
-
-manipular.atual = 2
-console.log(manipular.atual)
