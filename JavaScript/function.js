@@ -54,7 +54,7 @@ var funcaoAnonima = function(){ // função anônima não tem nome, é armazenad
 }
 funcaoAnonima()
 
-function callBack(a, b, soma){ // função de callback são funções que os parametros é outra função que vai ser executada dentro dela
+function callBack(a, b, soma){ // função de callback são funções que os param. são outra função que vai ser executada dentro dela
     return soma(a + b)
 }
 console.log(callBack(5, 5, function(total){ // param. "total" vai receber o valor do param. "soma" e executar o bloco de codigo
