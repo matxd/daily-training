@@ -12,4 +12,4 @@ dias > 15 ? console.log("Correto") : console.log("Incorreto")
 
 var a = 1
 console.log(a++)
-console.log(++a) 
+console.log(++a)
