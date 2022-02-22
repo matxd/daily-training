@@ -20,25 +20,25 @@ let valorDois = Number(prompt("Digite outro número"))
     if(isNaN(valorUm) || isNaN(valorDois)){ // isNaN(variavel) verifica se o valor da variavel retorna um numero ou não
         return msgCalc.innerHTML = "<strong>ERROR: Digite um número.</strong>"
     }
-        switch(operador){
-            case "+":
-                msgCalc.innerHTML = `${valorUm} + ${valorDois} é igual a: ` + (valorUm + valorDois)
-            break;
-            case "-":
-                msgCalc.innerHTML = `${valorUm} - ${valorDois} é igual a: ` + (valorUm - valorDois)
-            break;
-            case "*":
-                msgCalc.innerHTML = `${valorUm} x ${valorDois} é igual a: ` + (valorUm * valorDois)
-            break;
-            case "/":
-                msgCalc.innerHTML = `${valorUm} dividido por ${valorDois} é igual a: ` + (valorUm / valorDois)
-            break;
-            case "%":
-                msgCalc.innerHTML = `${valorUm}% de ${valorDois} é igual a: ` + ((valorDois / 100) * valorUm)
-            break;
-            default:
-                msgCalc.innerHTML = "<strong>ERROR: Operador inválido.</strong>"
-        }
+    switch(operador){
+        case "+":
+            msgCalc.innerHTML = `${valorUm} + ${valorDois} é igual a: ` + (valorUm + valorDois)
+        break;
+        case "-":
+            msgCalc.innerHTML = `${valorUm} - ${valorDois} é igual a: ` + (valorUm - valorDois)
+        break;
+        case "*":
+            msgCalc.innerHTML = `${valorUm} x ${valorDois} é igual a: ` + (valorUm * valorDois)
+        break;
+        case "/":
+            msgCalc.innerHTML = `${valorUm} dividido por ${valorDois} é igual a: ` + (valorUm / valorDois)
+        break;
+        case "%":
+            msgCalc.innerHTML = `${valorUm}% de ${valorDois} é igual a: ` + ((valorDois / 100) * valorUm)
+        break;
+        default:
+            msgCalc.innerHTML = "<strong>ERROR: Operador inválido.</strong>"
+    }
 }
 
 function parametro(...compl){  // ...nome serve pra adicionar mais parametros, todos no mesmo array
