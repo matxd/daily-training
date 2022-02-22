@@ -2,13 +2,12 @@ function login(){
 let usuario = document.getElementById("user").value
 let senha = document.getElementById("pass").value
 
-    if(usuario == 0 || senha == 0){
-        msgLogin.innerHTML = "Preencha todos os campos."
-    } else if(usuario == "admin" && senha == "admin"){
-        msgLogin.innerHTML = "Login feito com sucesso."
-    } else{
-        msgLogin.innerHTML = "Usuario ou Senha invalido."
-    }  
+    if(usuario === 0 || senha === 0){ 
+        return msgLogin.innerHTML = "Preencha todos os campos." 
+    } if(usuario === "admin" && senha === "admin"){ 
+        return msgLogin.innerHTML = "Login feito com sucesso." 
+    } 
+    msgLogin.innerHTML = "Usuario ou Senha invalido." 
     document.getElementById("user").value = ""
     document.getElementById("pass").value = ""
 }
@@ -19,8 +18,8 @@ let operador = prompt("Digite um operador. Ex: + , - , / , *, %")
 let valorDois = Number(prompt("Digite outro número"))
 
     if(isNaN(valorUm) || isNaN(valorDois)){ // isNaN(variavel) verifica se o valor da variavel retorna um numero ou não
-        msgCalc.innerHTML = "<strong>ERROR: Digite um número.</strong>"
-    } else {
+        return msgCalc.innerHTML = "<strong>ERROR: Digite um número.</strong>"
+    }
         switch(operador){
             case "+":
                 msgCalc.innerHTML = `${valorUm} + ${valorDois} é igual a: ` + (valorUm + valorDois)
@@ -39,9 +38,7 @@ let valorDois = Number(prompt("Digite outro número"))
             break;
             default:
                 msgCalc.innerHTML = "<strong>ERROR: Operador inválido.</strong>"
-            break;
         }
-    }
 }
 
 function parametro(...compl){  // ...nome serve pra adicionar mais parametros, todos no mesmo array
