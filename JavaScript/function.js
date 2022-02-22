@@ -47,10 +47,10 @@ let valorDois = Number(prompt("Digite outro número"))
 function parametro(...compl){  // ...nome serve pra adicionar mais parametros, todos no mesmo array
     console.log(compl)
 }
-parametro("xdm", "expoit")
+parametro("xdm", "dev")
 
-var funcaoAnonima = function(){ // função anônima não tem nome, é armazenada dentro de uma variavel
-    console.log("Função Anônima JavaScript")
+let funcaoAnonima = function(){ // função anônima não tem nome, é armazenada dentro de uma variavel
+    console.log("Função Anônima JS")
 }
 funcaoAnonima()
 
@@ -58,5 +58,11 @@ function callBack(a, b, soma){ // função de callback são funções que os par
     return soma(a + b)
 }
 console.log(callBack(5, 5, function(total){ // param. "total" vai receber o valor do param. "soma" e executar o bloco de codigo
-    return total * 2 
+    return "CallBack: " + total * 2 
 }))
+
+let arrowFn = (valor, valorDois) => { return valor / valorDois } // arrowfunction são funçoes com sintaxe simplificada porém em alguns casos não substitui functions default
+console.log("ArrowFunction: " + arrowFn(44, 4))
+
+let arrowNoArg = () => console.log("Sem passar argumentos")
+arrowNoArg()
