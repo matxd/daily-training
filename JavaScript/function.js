@@ -41,20 +41,20 @@ let valorDois = Number(prompt("Digite outro número"))
     }
 }
 
-function parametro(...compl){ 
-    console.log(compl)
+function parametro(...complementares){ 
+    console.log(complementares)
 }
 parametro("xdm", "dev")
 
-let funcaoAnonima = function(){ 
+let fnAnonima = function(){ 
     console.log("Função Anônima JS")
 }
-funcaoAnonima()
+fnAnonima()
 
-function callBack(a, b, soma){ 
+function fnCallBack(a, b, soma){ 
     return soma(a + b)
 }
-console.log(callBack(5, 5, function(total){ 
+console.log(fnCallBack(5, 5, function(total){ 
     return "CallBack: " + total * 2 
 }))
 
@@ -69,8 +69,8 @@ function thisNew(){
     this.telefone = 123456789
 }
 
-let dados = new thisNew()
-console.log(dados)
+let valores = new thisNew()
+console.log(valores)
 
 function callApplyBind(p1, p2){
     console.log(this)
