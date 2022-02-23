@@ -58,8 +58,27 @@ console.log(callBack(5, 5, function(total){ // param. "total" vai receber o valo
     return "CallBack: " + total * 2 
 }))
 
-let arrowFn = (valor, valorDois) => { return valor / valorDois } // arrowfunction são funçoes com sintaxe simplificada porém em alguns casos não substitui functions default
+let arrowFn = (valor, valorDois) => valor / valorDois  // arrowfunction são funçoes com sintaxe simplificada porém em alguns casos não substitui functions default
 console.log("ArrowFunction: " + arrowFn(44, 4))
 
 let arrowNoArg = () => console.log("Sem passar argumentos")
 arrowNoArg()
+
+function thisNew(){
+    this.nome = "Matheus"
+    this.telefone = 123456789
+}
+
+let dados = new thisNew() // sempre que chamar uma função com o " new " vai retornar um obj. " this ", podendo manipular o valor de " this "
+console.log(dados)
+
+function callApplyBind(p1, p2){
+    console.log(this)
+    console.log(p1, p2)
+}
+
+let valorThis = "Esse é o valor de this"
+callApplyBind.call(valorThis, "pCall", 123) // .call - o primeiro param. na chamada da função vai ser o valor de " this "
+callApplyBind.apply(valorThis, ["pApply", 456]) // .apply - os param. da função terão que ser passados dentro de um array
+let box = callApplyBind.bind(valorThis, "pBind", 789) // .bind - retorna a função com os param. passados porem não chama a funçao 
+box()
