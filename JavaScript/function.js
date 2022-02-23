@@ -17,7 +17,7 @@ let valorUm = Number(prompt("Digite um número"))
 let operador = prompt("Digite um operador. Ex: + , - , / , *, %")
 let valorDois = Number(prompt("Digite outro número"))
 
-    if(isNaN(valorUm) || isNaN(valorDois)){ // isNaN(variavel) verifica se o valor da variavel retorna um numero ou não
+    if(isNaN(valorUm) || isNaN(valorDois)){ 
         return msgCalc.innerHTML = "<strong>ERROR: Digite um número.</strong>"
     }
     switch(operador){
@@ -41,24 +41,24 @@ let valorDois = Number(prompt("Digite outro número"))
     }
 }
 
-function parametro(...compl){  // ...nome serve pra adicionar mais parametros, todos no mesmo array
+function parametro(...compl){ 
     console.log(compl)
 }
 parametro("xdm", "dev")
 
-let funcaoAnonima = function(){ // função anônima não tem nome, é armazenada dentro de uma variavel
+let funcaoAnonima = function(){ 
     console.log("Função Anônima JS")
 }
 funcaoAnonima()
 
-function callBack(a, b, soma){ // função de callback são funções que os param. são outra função que vai ser executada dentro dela
+function callBack(a, b, soma){ 
     return soma(a + b)
 }
-console.log(callBack(5, 5, function(total){ // param. "total" vai receber o valor do param. "soma" e executar o bloco de codigo
+console.log(callBack(5, 5, function(total){ 
     return "CallBack: " + total * 2 
 }))
 
-let arrowFn = (valor, valorDois) => valor / valorDois  // arrowfunction são funçoes com sintaxe simplificada porém em alguns casos não substitui functions default
+let arrowFn = (valor, valorDois) => valor / valorDois  
 console.log("ArrowFunction: " + arrowFn(44, 4))
 
 let arrowNoArg = () => console.log("Sem passar argumentos")
@@ -69,7 +69,7 @@ function thisNew(){
     this.telefone = 123456789
 }
 
-let dados = new thisNew() // sempre que chamar uma função com o " new " vai retornar um obj. " this ", podendo manipular o valor de " this "
+let dados = new thisNew()
 console.log(dados)
 
 function callApplyBind(p1, p2){
@@ -78,7 +78,7 @@ function callApplyBind(p1, p2){
 }
 
 let valorThis = "Esse é o valor de this"
-callApplyBind.call(valorThis, "pCall", 123) // .call - o primeiro param. na chamada da função vai ser o valor de " this "
-callApplyBind.apply(valorThis, ["pApply", 456]) // .apply - os param. da função terão que ser passados dentro de um array
-let box = callApplyBind.bind(valorThis, "pBind", 789) // .bind - retorna a função com os param. passados porem não chama a funçao 
+callApplyBind.call(valorThis, "pCall", 123) 
+callApplyBind.apply(valorThis, ["pApply", 456]) 
+let box = callApplyBind.bind(valorThis, "pBind", 789) 
 box()

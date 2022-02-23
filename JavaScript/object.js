@@ -4,31 +4,31 @@ const dados = {
     tel: 61123456789
 }
 
-dados.ano = 2022 // adicionando novas prop. a um obj criado
+dados.ano = 2022 
 dados.array = ["valorUm", "valorDois"]
 dados.obj = {
     key: 1,
     keys: [3, 4, 5]
 }
 
-let { nome, tel } = dados // armazenando uma prop. do obj em uma variavel
-let { email: contato } = dados // armazenando prop. e escolhendo a variavel
-let { obj: { keys }} = dados // armazenando prop. de um obj que é outro obj
+let { nome, tel } = dados 
+let { email: contato } = dados 
+let { obj: { keys }} = dados 
 
-delete dados.tel // deleta uma prop. do obj
+delete dados.tel 
 
 let cor = "preto"
 const developer = {
-    digaOi(nome){ // função dentro da prop. do obj 
+    digaOi(nome){ 
         return `Oi, ${nome}` 
     },
-    cor // adicionando variavel ao valor de uma prop.
+    cor 
 }
-console.log(developer.digaOi("Matheus")) // chamando uma prop. e passando o valor do parametro
+console.log(developer.digaOi("Matheus")) 
 
-let chaves = Object.keys(dados) // Object.keys exibe todas as prop. de um obj no formato de array
-let valores = Object.values(developer) // Object.values exibe todos os valores de cada prop. do obj no formato de array
-let merge = Object.assign({}, dados, developer) // Object.assign serve pra mergear/juntar dois ou mais obj's em um novo obj ( {} - novo obj )
+let chaves = Object.keys(dados) 
+let valores = Object.values(developer) 
+let merge = Object.assign({}, dados, developer) 
 
 const usuarios = [
     {nome: "Fulano", idade: 18, profissão: "Professor"},
@@ -38,8 +38,8 @@ const usuarios = [
     
 const manipular = {
     posicao: 0,
-    get proximo(){ // get associa uma prop. de um obj a uma função e retorna o valor
-        return usuarios[++this.posicao] // this se refere a este obj
+    get proximo(){ 
+        return usuarios[++this.posicao] 
     },
     get anterior(){
         return usuarios[--this.posicao]
@@ -47,7 +47,7 @@ const manipular = {
     get atual(){
         return usuarios[this.posicao]
     },
-    set atual(posicao){ // set liga a prop. da função quando existe uma tentativa de definir valor a essa prop.
+    set atual(posicao){ 
         return this.posicao = posicao
     }
 }
