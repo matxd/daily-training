@@ -1,23 +1,35 @@
-body {
-    background-color: rgb(54, 54, 54);
-}
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 h2 {
-    color: rgb(255, 255, 255);
+    font-size: 30px;
+    color: rgb(35, 117, 32);
+    font-family: 'Bebas Neue', cursive;
 }
 
 p {
     font-size: 20px;
     color: rgb(197, 197, 197);
+    font-family: 'Cairo', sans-serif;
 }
 
 input {
     border: 0;
+    border-radius: 5px;
+    height: 30px;
 }
 
-#valores {
-    width: 100px; /* Largura */
-    height: 30px; /* Altura */
+button {
+    width: 100px;
+    height: 30px; 
     border-radius: 5px;
     border: 0;
+}
+
+.loginSystem, .calcSystem {
+    width: 500px;
+    border: 5px solid rgb(35, 117, 32);
+    border-radius: 20px;
+    text-align: center;
+    background-color: black;
 }
