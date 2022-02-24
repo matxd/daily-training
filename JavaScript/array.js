@@ -1,9 +1,13 @@
-let array = ["xdm", "matheus", "esb", "ty", "cash"]
-let arrayDois = [3, 2, 1]
+let words = ["Xdm", "Matheus", "Esb", "Ty", "Cash"]
+let numbers = [3, 2, 1]
 
-console.log([...array, ...arrayDois]) 
-console.log(array.slice(1, 2)) 
-console.log(array.splice(0, 1)) 
-console.log(array.pop()) 
-console.log(array.push("expoit")) 
-console.log(array.includes("xdm"))
+console.log([...words, ...numbers]) 
+console.log(words.slice(1, 2)) 
+console.log(words.splice(0, 1)) 
+console.log(words.pop()) 
+console.log(words.push("Expoit")) 
+console.log(words.includes("Xdm"))
+console.log(words.map(word => word.toLowerCase()))
+console.log(numbers.map(number => number * 2))
+console.log(numbers.filter(number => number % 2 === 0))
+console.log(numbers.reduce((valorAcumulador, valorArray) => valorAcumulador + valorArray, 0))
