@@ -2,14 +2,14 @@ function login(){
 let usuario = document.getElementById("user").value
 let senha = document.getElementById("pass").value
 
-    if(usuario === 0 || senha === 0){ 
+    if(usuario === "" || senha === ""){ 
         return msgLogin.innerHTML = "Preencha todos os campos." 
-    } if(usuario === "admin" && senha === "admin"){ 
+    } if(usuario === "admin" && senha === "admin"){    
         return msgLogin.innerHTML = "Login feito com sucesso." 
-    } 
-    msgLogin.innerHTML = "Usuario ou Senha invalido." 
+    }
     document.getElementById("user").value = ""
-    document.getElementById("pass").value = ""
+    document.getElementById("pass").value = "" 
+    msgLogin.innerHTML = "Usuario ou Senha invalido." 
 }
 
 function calculator(){

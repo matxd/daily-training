@@ -2,17 +2,17 @@ for(let inc = 0; inc < 2; inc++){
     console.log(`For // ${inc}`)
 }
 
-let array = [5, 15, 25] 
-for(let dec = array.length - 1; dec >= 0; dec--){ 
-    console.log(`chave: ${dec} // valor: ${array[dec]}`)
+let number = [5, 15, 25] 
+for(let dec = number.length - 1; dec >= 0; dec--){ 
+    console.log(`chave: ${dec} // valor: ${number[dec]}`)
 }
 
-let arrayDois = [10, 20, 30]
+let numberTwo = [10, 20, 30]
 let result = 0
-for(let value of arrayDois){
+for(let value of numberTwo){
     result += value
 }
-console.log(`A soma de todos os valores do arrayDois é: ${result}`)
+console.log(`A soma de todos os valores do numberTwo é: ${result}`)
 
 let count = 0
 while(count < 5){ 

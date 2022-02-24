@@ -7,8 +7,8 @@ arrowGlobal()
 // Escopo local é tudo que você declara dentro de um escopo já existente, por exemplo o escopo de uma funçao.
 
 function escopoLocal(){
-    var local = "Escopo local criado com var por se tratar de uma function"
-    console.log(local)
+    var localVar = "Escopo local criado com var por se tratar de uma function"
+    console.log(localVar)
 }
 escopoLocal()
 
