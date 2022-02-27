@@ -1,5 +1,5 @@
-let words = ["Xdm", "Matheus", "Esb", "Ty", "Cash"]
-let numbers = [3, 2, 1]
+const words = ["Xdm", "Matheus", "Esb", "Ty", "Cash"]
+const numbers = [3, 2, 1]
 
 console.log([...words, ...numbers]) 
 console.log(words.slice(1, 2)) 

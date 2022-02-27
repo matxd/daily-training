@@ -1,6 +1,6 @@
 function login(){
-let usuario = document.getElementById("user").value
-let senha = document.getElementById("pass").value
+const usuario = document.getElementById("user").value
+const senha = document.getElementById("pass").value
 
     if(usuario === "" || senha === ""){ 
         return msgLogin.innerHTML = "Preencha todos os campos." 
@@ -13,9 +13,9 @@ let senha = document.getElementById("pass").value
 }
 
 function calculator(){
-let valorUm = Number(prompt("Digite um número"))
-let operador = prompt("Digite um operador. Ex: + , - , / , *, %")
-let valorDois = Number(prompt("Digite outro número"))
+const valorUm = Number(prompt("Digite um número"))
+const operador = prompt("Digite um operador. Ex: + , - , / , *, %")
+const valorDois = Number(prompt("Digite outro número"))
 
     if(isNaN(valorUm) || isNaN(valorDois)){ 
         return msgCalc.innerHTML = "<strong>ERROR: Digite um número.</strong>"
