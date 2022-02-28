@@ -5,22 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="JavaScript/function.js"></script>
+    <script src="JavaScript/script.js"></script>
     <title>Aprendendo JavaScript</title>
 </head>
 <body>
     <div class="loginSystem">
         <h2>SISTEMA DE LOGIN</h2>
-        <input type="text" placeholder="Usuário" id="user">
-        <input type="password" placeholder="Senha" id="pass">
-        <button onclick="login()">Fazer Login</button>
+        <input type="text" id="user" placeholder="Usuário">
+        <input type="password" id="pass" placeholder="Senha">
+        <button onclick="login()">Login</button>
         <p id="msgLogin">Digite o seu usuário e senha.</p>
     </div>
     <hr>
     <div class="calcSystem">
         <h2>CALCULADORA DE DOIS VALORES</h2>
-        <button onclick="calculator()">Inserir</button>
-        <p id="msgCalc">Clique no botão acima para inserir os valores.</p>
+        <input type="text" id="numeroUm" placeholder="Insira um número">
+        <select name="operadores" id="operadores">
+            <option></option>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <input type="text" id="numeroDois" placeholder="Insira um número">
+        <button onclick="calculator()">Calcular</button>
+        <p id="msgCalc">Digite dois números e selecione o operador.</p>
     </div>
 </body>
-</html>
+</html
