@@ -64,6 +64,11 @@ console.log("ArrowFunction: " + arrowFn(44, 4))
 let arrowNoArg = () => console.log("Sem passar argumentos")
 arrowNoArg()
 
+let IIFE = (function(){
+    return `Função IIFE`
+})()
+console.log(IIFE)
+
 function thisNew(){
     this.nome = "Matheus"
     this.telefone = 123456789
