@@ -1,20 +1,28 @@
+@charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 body {
-    background-color: rgb(48, 48, 48);
+    background-image: linear-gradient(to right, #686A6B, #B5B8BA);
+    margin: 0px;
+}
+
+p {
+    font-size: 20px;
+    color: #aab4b9;
+    font-family: 'Cairo', sans-serif;
 }
 
 h2 {
     font-size: 30px;
-    color: rgb(204, 211, 204);
+    color: #B5B8BA;
     font-family: 'Bebas Neue', cursive;
 }
 
 input {
-    border: 0;
-    border-radius: 5px;
     height: 30px;
+    border: 0;
+    border-radius: 5px; 
 }
 
 button {
@@ -24,18 +32,21 @@ button {
     border: 0;
 }
 
-p {
-    font-size: 20px;
-    color: rgb(197, 197, 197);
-    font-family: 'Cairo', sans-serif;
+button:hover {
+    background-color: #686A6B;
+    color: white;
+    transition: all 0.3s ease-in;
 }
 
 .loginSystem, .calcSystem {
     width: 500px;
-    border: 5px solid rgb(204, 211, 204);
+    border: 3px solid #B5B8BA;
     border-radius: 20px;
     text-align: center;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(36, 36, 36);
+    box-shadow: 2px 2px 15px black;
+    margin: 3px;
+    display: inline-block;
 }
 
 #operadores {
