@@ -14,7 +14,7 @@ function login(){
 
 function calculator(){
     const valorUm = parseFloat(document.getElementById("numeroUm").value)
-    const operador = document.getElementById("operadores").value
+    const operador = document.getElementById("operators").value
     const valorDois = parseFloat(document.getElementById("numeroDois").value)
 
     if(isNaN(valorUm) || isNaN(valorDois)){ 
