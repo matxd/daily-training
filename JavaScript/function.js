@@ -41,6 +41,7 @@ function callApplyBind(p1, p2){
 
 let valorThis = "Esse é o valor de this"
 callApplyBind.call(valorThis, "pCall", 123) 
-callApplyBind.apply(valorThis, ["pApply", 456]) 
-let box = callApplyBind.bind(valorThis, "pBind", 789) 
+callApplyBind.apply(valorThis, ["pApply", 456])
+ 
+let box = callApplyBind.bind(valorThis, "pBind", 789)
 box()
