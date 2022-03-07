@@ -51,3 +51,11 @@ const manipular = {
         return this.posicao = posicao
     }
 }
+
+const esteObj = {
+    game: "CSGO",
+    arrow: function(){
+        console.log((() => this)()) // this - referencia ao contexto deste objeto
+    }
+}
+esteObj.arrow()
