@@ -44,3 +44,5 @@ callApplyBind.call(valorThis, "pCall", 123) // lista de argumentos
 callApplyBind.apply(valorThis, ["pApply", 456]) // array de argumentos
 let box = callApplyBind.bind(valorThis, "pBind", 789)
 box()
+
+// new instancia um objeto
