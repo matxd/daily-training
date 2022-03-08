@@ -2,6 +2,7 @@ let words = ["Xdm", "Matheus", "Esb", "Ty", "Cash"]
 let numbers = [3, 2, 1]
 let esparso = [5,,6,,8]
 
+console.log(esparso)
 console.log([...words, ...numbers]) 
 console.log(words.slice(1, 2)) 
 console.log(words.splice(0, 1)) 
