@@ -46,3 +46,11 @@ let box = callApplyBind.bind(valorThis, "pBind", 789)
 box()
 
 // new instancia um objeto
+
+function retornaFn(){
+    return function(){
+        console.log("Função que retorna outra função!")
+    }
+}
+
+retornaFn()() // executa a primeira function e executa o retorno no segundo parenteses
