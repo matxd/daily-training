@@ -17,7 +17,7 @@ let { obj: { keys }} = dados
 
 delete dados.tel 
 
-let cor = "preto"
+let cor = "azul"
 const developer = {
     digaOi(nome){ 
         return `Oi, ${nome}` 
@@ -25,10 +25,6 @@ const developer = {
     cor 
 }
 console.log(developer.digaOi("Matheus")) 
-
-let chaves = Object.keys(dados) 
-let valores = Object.values(developer) 
-let merge = Object.assign({}, dados, developer) 
 
 const usuarios = [
     {nome: "Fulano", idade: 18, profissão: "Professor"},
@@ -52,10 +48,31 @@ const manipular = {
     }
 }
 
+manipular.atual = 0
+console.log(manipular.atual)
+
 const esteObj = {
     game: "CSGO",
     arrow: function(){
-        console.log((() => this)()) // this - referencia ao contexto deste objeto
+        console.log( (() => this)() ) // this - referencia ao contexto deste objeto
     }
 }
 esteObj.arrow()
+
+const arrayChaves = Object.keys(dados)
+const arrayValores = Object.values(developer) 
+const merge = Object.assign({}, dados, developer) 
+
+const arrayEntrada = [
+    ["abc", 2],
+    ["dfe", 4]
+]
+
+const retornoObjeto = Object.fromEntries(arrayEntrada)
+
+const objetoEntrada = {
+    abc: 2,
+    dfe: 4
+}
+
+const retornoArray = Object.entries(objetoEntrada)
