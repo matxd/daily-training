@@ -1,1 +1,1 @@
-    Learning every day !
+    Learning every day!
