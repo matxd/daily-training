@@ -19,7 +19,7 @@ class Developer { // classe pai
         this.linguagem = linguagem   
     }    
     apresentacao(){
-        console.log(`Me chamo ${this.nome}, tenho ${this.idade} anos, area de atuação ${this.tipo}, linguagem ${this.linguagem} e framework ${this.framework}.`)
+        console.log(`Me chamo ${this.nome}, tenho ${this.idade} anos, area de atuação ${this.tipo}, linguagem ${this.linguagem}.`)
     }
 }
 
