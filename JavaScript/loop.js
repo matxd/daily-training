@@ -14,6 +14,11 @@ for(let value of numberTwo){
 }
 console.log(`A soma de todos os valores do numberTwo é: ${result}`)
 
+const listaIteravel = ["Matheus", "xdm"]
+for(let controle of listaIteravel){
+    console.log(controle.toUpperCase())
+}
+
 let count = 0
 while(count < 5){ 
     count % 2 === 0 ? console.log(`${count} - Par`) : console.log(`${count} - Impar`)
