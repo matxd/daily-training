@@ -12,26 +12,24 @@ console.log(carroUm)
 console.log(carroDois)
 
 class Developer { // classe pai
-    constructor(nome, idade, linguagem){
+    constructor(nome, idade, tipo, linguagem){
         this.nome = nome
         this.idade = idade
-        this.linguagem = linguagem
+        this.tipo = tipo
+        this.linguagem = linguagem   
+    }    
+    apresentacao(){
+        console.log(`Me chamo ${this.nome}, tenho ${this.idade} anos, area de atuação ${this.tipo}, linguagem ${this.linguagem} e framework ${this.framework}.`)
     }
 }
 
 class FrontEnd extends Developer { // classe filha herdando classe pai
-    constructor(nome, idade, linguagem, framework){
-        super() // chamando o construtor da classe pai
-        this.nome = nome
-        this.idade = idade
-        this.linguagem = linguagem
+    constructor(nome, idade, tipo, linguagem, framework){
+        super(nome, idade, tipo, linguagem) // chamando o construtor da classe pai
         this.framework = framework
-    }
-    apresentacao(){
-        console.log(`Me chamo ${this.nome}, tenho ${this.idade} anos, trabalho com ${this.linguagem} e com o framework ${this.framework}.`)
     }
 }
 
-const pessoaUm = new FrontEnd("Matheus", 20, "JavaScript", "React Native")
+const pessoaUm = new FrontEnd("Matheus", 77, "FrontEnd", "JavaScript", "React Native")
 
 pessoaUm.apresentacao()
