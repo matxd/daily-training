@@ -54,3 +54,16 @@ function retornaFn(){
 }
 
 retornaFn()() // executa a primeira function e executa o retorno no segundo parenteses
+
+function somaQualquerNumero(){
+    const arrayArg = Array.from(arguments) // transformando o objeto arguments em array
+    return arrayArg.reduce((acumulador, valorAtual) => acumulador += valorAtual )
+}
+
+console.log(somaQualquerNumero(5, 6, 8, 9, 10, 20))
+
+const somaQualquerNumeroV2 = (multip, ...args) => { // rest parameters
+    return args.map((numero) => multip * numero)
+}
+
+console.log(somaQualquerNumeroV2(2, 20, 30, 40, 10))
