@@ -26,3 +26,7 @@ userName(user)
 const key = "z"
 const {[key]: palavras} = {z: "Destructuring"}
 console.log(palavras)
+
+const somaArrayObj = ([x, y] = [1, 2], {z: z} = {z: 3}) => console.log(x + y + z) 
+somaArrayObj()
+somaArrayObj([5, 7], {z: 9})
